@@ -12,10 +12,7 @@ const FooterSection = () => {
           <span className="text-primary-foreground/80">real earning potential</span>.
         </h2>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <CTAButton />
-          <CTAButton country="DRC" />
-        </div>
+        <CTAButton />
 
         <p className="text-primary-foreground/50 text-sm pt-8">
           © {new Date().getFullYear()} Home Business Kenya Guide. All rights reserved.
