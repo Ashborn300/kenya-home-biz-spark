@@ -54,19 +54,19 @@ const WhoAmISection = () => {
         </div>
 
         {/* Additional photos */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="grid grid-cols-2 gap-4 max-w-lg mx-auto">
           <div ref={img2Ref} style={img2Style}>
             <img
               src={joshuaChinaMarket}
               alt="Joshua at China wholesale market"
-              className="rounded-2xl shadow-lg w-full object-cover aspect-[3/4]"
+              className="rounded-xl shadow-md w-full object-cover aspect-square"
             />
           </div>
           <div ref={img3Ref} style={img3Style}>
             <img
               src={joshuaChinatown}
               alt="China Town Market sourcing"
-              className="rounded-2xl shadow-lg w-full object-cover aspect-[4/3]"
+              className="rounded-xl shadow-md w-full object-cover aspect-square"
             />
           </div>
         </div>
