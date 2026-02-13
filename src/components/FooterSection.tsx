@@ -9,7 +9,7 @@ const FooterSection = () => {
       <div ref={ref} style={style} className="container mx-auto px-4 max-w-3xl text-center space-y-8">
         <h2 className="text-2xl md:text-4xl font-bold font-heading text-primary-foreground leading-snug">
           Start your home mini-industry in Kenya with a simple plan, affordable machines, and{" "}
-          <span className="text-secondary">real earning potential</span>.
+          <span className="text-primary-foreground/80">real earning potential</span>.
         </h2>
 
         <CTAButton />

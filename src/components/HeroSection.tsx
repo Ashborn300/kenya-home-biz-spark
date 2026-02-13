@@ -25,7 +25,7 @@ const HeroSection = () => (
       <div className="space-y-6 animate-fade-up">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-heading text-primary-foreground leading-tight">
           Earn Millions of Ksh{" "}
-          <span className="text-secondary">From Home</span> in Kenya
+          <span className="text-primary-foreground/80">From Home</span> in Kenya
         </h1>
 
         <p className="text-lg md:text-xl text-primary-foreground/90 max-w-2xl mx-auto leading-relaxed">
