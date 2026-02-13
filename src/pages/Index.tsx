@@ -5,6 +5,7 @@ import InsideGuideSection from "@/components/InsideGuideSection";
 import StatsSection from "@/components/StatsSection";
 import WhoAmISection from "@/components/WhoAmISection";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import TrustedSection from "@/components/TrustedSection";
 import FooterSection from "@/components/FooterSection";
 
 const Index = () => (
@@ -16,6 +17,7 @@ const Index = () => (
     <StatsSection />
     <WhoAmISection />
     <TestimonialsSection />
+    <TrustedSection />
     <FooterSection />
   </main>
 );
