@@ -11,7 +11,7 @@ const CTAButton = ({ className = "", country = "KE", label }: CTAButtonProps) =>
   const [open, setOpen] = useState(false);
 
   const defaultLabel = country === "DRC"
-    ? "Acheter le Guide — 5,000 CDF (Test)"
+    ? "Acheter le Guide — 5,000 CDF"
     : "Buy the Guide — $20 (2,600 Ksh)";
 
   return (
