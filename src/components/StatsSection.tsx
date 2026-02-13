@@ -1,12 +1,29 @@
 import CTAButton from "./CTAButton";
 import { TrendingUp, Shield, DollarSign, Clock } from "lucide-react";
+import { useCountUp } from "@/hooks/useCountUp";
 
 const stats = [
-  { icon: DollarSign, label: "Low-Cost Entry", desc: "Machines selected for affordable pricing" },
-  { icon: TrendingUp, label: "Clear Profitability", desc: "Monthly earning estimates included" },
-  { icon: Shield, label: "Reduced Risk", desc: "Shipping guidance + cost planning included" },
-  { icon: Clock, label: "Time-Saving", desc: "Everything organized in one guide" },
+  { icon: DollarSign, label: "Low-Cost Entry", desc: "Machines selected for affordable pricing", value: 15, suffix: "+", prefix: "" },
+  { icon: TrendingUp, label: "Clear Profitability", desc: "Monthly earning estimates included", value: 200, suffix: "K+", prefix: "" },
+  { icon: Shield, label: "Reduced Risk", desc: "Shipping guidance + cost planning included", value: 95, suffix: "%", prefix: "" },
+  { icon: Clock, label: "Time-Saving", desc: "Everything organized in one guide", value: 50, suffix: "+", prefix: "" },
 ];
+
+const StatCard = ({ icon: Icon, label, desc, value, suffix, prefix }: typeof stats[number]) => {
+  const { count, ref } = useCountUp(value, 2000);
+  return (
+    <div ref={ref} className="section-card text-center space-y-3">
+      <div className="w-14 h-14 rounded-2xl bg-secondary/15 flex items-center justify-center mx-auto">
+        <Icon className="w-7 h-7 text-secondary" />
+      </div>
+      <p className="text-3xl md:text-4xl font-heading font-bold text-secondary">
+        {prefix}{count}{suffix}
+      </p>
+      <h3 className="font-heading font-bold text-lg">{label}</h3>
+      <p className="text-muted-foreground text-sm">{desc}</p>
+    </div>
+  );
+};
 
 const StatsSection = () => (
   <section className="py-20 bg-muted">
@@ -20,13 +37,7 @@ const StatsSection = () => (
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
         {stats.map((s) => (
-          <div key={s.label} className="section-card text-center space-y-3">
-            <div className="w-14 h-14 rounded-2xl bg-secondary/15 flex items-center justify-center mx-auto">
-              <s.icon className="w-7 h-7 text-secondary" />
-            </div>
-            <h3 className="font-heading font-bold text-lg">{s.label}</h3>
-            <p className="text-muted-foreground text-sm">{s.desc}</p>
-          </div>
+          <StatCard key={s.label} {...s} />
         ))}
       </div>
 
