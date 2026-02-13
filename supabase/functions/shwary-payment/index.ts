@@ -53,7 +53,7 @@ Deno.serve(async (req) => {
 
     const endpoint = `https://api.shwary.com/api/v1/merchants/payment/${countryCode}`;
 
-    const amount = countryCode === "DRC" ? 5000 : 2600;
+    const amount = countryCode === "DRC" ? 500 : 2600;
 
     const response = await fetch(endpoint, {
       method: "POST",
