@@ -6,13 +6,18 @@ const corsHeaders = {
     "authorization, x-client-info, apikey, content-type",
 };
 
+const COUNTRY_CONFIG: Record<string, { prefix: string; minAmount: number }> = {
+  KE: { prefix: "+254", minAmount: 100 },
+  DRC: { prefix: "+243", minAmount: 2900 },
+};
+
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
   }
 
   try {
-    const { phoneNumber } = await req.json();
+    const { phoneNumber, countryCode = "KE" } = await req.json();
 
     if (!phoneNumber || typeof phoneNumber !== "string") {
       return new Response(
@@ -21,13 +26,20 @@ Deno.serve(async (req) => {
       );
     }
 
-    // Ensure phone starts with +254
+    const country = COUNTRY_CONFIG[countryCode];
+    if (!country) {
+      return new Response(
+        JSON.stringify({ error: "Unsupported country" }),
+        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
     const cleaned = phoneNumber.replace(/\s/g, "");
-    const formatted = cleaned.startsWith("+254")
+    const formatted = cleaned.startsWith(country.prefix)
       ? cleaned
       : cleaned.startsWith("0")
-      ? "+254" + cleaned.slice(1)
-      : "+254" + cleaned;
+      ? country.prefix + cleaned.slice(1)
+      : country.prefix + cleaned;
 
     const merchantId = Deno.env.get("SHWARY_MERCHANT_ID");
     const merchantKey = Deno.env.get("SHWARY_MERCHANT_KEY");
@@ -39,21 +51,25 @@ Deno.serve(async (req) => {
       );
     }
 
-    const response = await fetch(
-      "https://api.shwary.com/api/v1/merchants/payment/KE",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "x-merchant-id": merchantId,
-          "x-merchant-key": merchantKey,
-        },
-        body: JSON.stringify({
-          amount: 2600,
-          clientPhoneNumber: formatted,
-        }),
-      }
-    );
+    // Use sandbox for DRC testing, live for KE
+    const endpoint = countryCode === "DRC"
+      ? `https://api.shwary.com/api/v1/merchants/payment/sandbox/${countryCode}`
+      : `https://api.shwary.com/api/v1/merchants/payment/${countryCode}`;
+
+    const amount = countryCode === "DRC" ? 5000 : 2600;
+
+    const response = await fetch(endpoint, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "x-merchant-id": merchantId,
+        "x-merchant-key": merchantKey,
+      },
+      body: JSON.stringify({
+        amount,
+        clientPhoneNumber: formatted,
+      }),
+    });
 
     const data = await response.json();
 
