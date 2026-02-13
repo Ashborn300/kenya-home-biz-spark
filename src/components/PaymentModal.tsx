@@ -19,7 +19,7 @@ const countryConfig: Record<PaymentCountry, { title: string; description: string
     successMsg: "Check your phone for the M-Pesa prompt and enter your PIN to complete the payment.",
   },
   DRC: {
-    title: "Acheter le Guide — 5,000 CDF (Test)",
+    title: "Acheter le Guide — 5,000 CDF",
     description: "Entrez votre numéro Mobile Money pour recevoir une demande de paiement.",
     placeholder: "0812 345 678",
     hint: "Numéro congolais (ex: 0812345678)",

@@ -51,10 +51,7 @@ Deno.serve(async (req) => {
       );
     }
 
-    // Use sandbox for DRC testing, live for KE
-    const endpoint = countryCode === "DRC"
-      ? `https://api.shwary.com/api/v1/merchants/payment/sandbox/${countryCode}`
-      : `https://api.shwary.com/api/v1/merchants/payment/${countryCode}`;
+    const endpoint = `https://api.shwary.com/api/v1/merchants/payment/${countryCode}`;
 
     const amount = countryCode === "DRC" ? 5000 : 2600;
 
