@@ -1,1 +1,4 @@
 project_id = "qqgtmmllupzfmrdhdfvz"
+
+[functions.shwary-payment]
+verify_jwt = false

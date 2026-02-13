@@ -55,6 +55,8 @@ Deno.serve(async (req) => {
 
     const amount = countryCode === "DRC" ? 500 : 2600;
 
+    console.log("Shwary request:", { endpoint, amount, clientPhoneNumber: formatted, countryCode });
+
     const response = await fetch(endpoint, {
       method: "POST",
       headers: {
@@ -68,7 +70,15 @@ Deno.serve(async (req) => {
       }),
     });
 
-    const data = await response.json();
+    const rawText = await response.text();
+    console.log("Shwary raw response:", response.status, rawText);
+
+    let data;
+    try {
+      data = JSON.parse(rawText);
+    } catch {
+      data = { message: rawText };
+    }
 
     if (!response.ok) {
       console.error("Shwary error:", data);
