@@ -18,15 +18,11 @@ const faqs = [
   },
   {
     q: "How do I receive the guide?",
-    a: "After payment, you'll receive a digital PDF guide instantly via email or WhatsApp. You can read it on your phone, tablet, or computer.",
+    a: "After payment, you'll receive a digital PDF guide and video tutorials instantly via email or WhatsApp. You can read and watch them on your phone, tablet, or computer.",
   },
   {
     q: "Is the information specific to Kenya?",
     a: "Yes! Everything — from shipping costs, customs, supplier contacts, to profit margins — is tailored specifically for the Kenyan market.",
-  },
-  {
-    q: "What kind of machines are covered?",
-    a: "The guide covers chalk-making machines, nail-making machines, soap-cutting machines, and several other profitable small-scale manufacturing machines.",
   },
   {
     q: "Can I get support after buying the guide?",
