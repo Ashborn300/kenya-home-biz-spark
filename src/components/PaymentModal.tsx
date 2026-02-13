@@ -89,11 +89,22 @@ const PaymentModal = ({ open, onOpenChange, country = "KE" }: PaymentModalProps)
           <div className="text-center py-6 space-y-4">
             <CheckCircle className="w-16 h-16 text-primary mx-auto" />
             <p className="text-lg font-medium">
-              {country === "DRC" ? "Demande de paiement envoyée !" : "Payment request sent!"}
+              Payment Successful!
             </p>
-            <p className="text-muted-foreground text-sm">{config.successMsg}</p>
-            <Button onClick={() => handleClose(false)} className="mt-4">
-              {country === "DRC" ? "Terminé" : "Done"}
+            <p className="text-muted-foreground text-sm">
+              Your guide (PDF + videos) is ready to download. Click the button below:
+            </p>
+            <a
+              href="https://www.transfernow.net/dl/20260213gmnJnoQ8"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className="mt-2 w-full" size="lg">
+                Download Your Guide
+              </Button>
+            </a>
+            <Button variant="outline" onClick={() => handleClose(false)} className="mt-2">
+              Close
             </Button>
           </div>
         ) : (
