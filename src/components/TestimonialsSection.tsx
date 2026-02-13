@@ -1,0 +1,37 @@
+import CTAButton from "./CTAButton";
+import { Quote } from "lucide-react";
+
+const reviews = [
+  "Everything is explained clearly — I finally understood what to buy and how to start.",
+  "The shipping info saved me a lot of money and stress.",
+  "I liked that the guide gives realistic numbers for Kenya, not vague promises.",
+  "Nimeelewa kila hatua — mwongozo ni rahisi sana.",
+  "Bei na faida ziko wazi. Hakuna kubahatisha.",
+];
+
+const TestimonialsSection = () => (
+  <section className="py-20 bg-background">
+    <div className="container mx-auto px-4 max-w-5xl">
+      <h2 className="text-3xl md:text-5xl font-bold font-heading text-center mb-12">
+        What Customers <span className="text-secondary">Say</span>
+      </h2>
+
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+        {reviews.map((review, i) => (
+          <div key={i} className="section-card relative">
+            <Quote className="w-8 h-8 text-secondary/30 absolute top-6 right-6" />
+            <p className={`text-foreground/85 leading-relaxed ${i >= 3 ? "italic text-secondary" : ""}`}>
+              "{review}"
+            </p>
+          </div>
+        ))}
+      </div>
+
+      <div className="text-center">
+        <CTAButton />
+      </div>
+    </div>
+  </section>
+);
+
+export default TestimonialsSection;
