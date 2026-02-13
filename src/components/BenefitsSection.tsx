@@ -1,6 +1,7 @@
 import CTAButton from "./CTAButton";
 import { BadgeDollarSign, Truck, BarChart3, Handshake } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import nailMachine from "@/assets/nail-machine.webp";
 
 const benefits = [
   {
@@ -36,10 +37,18 @@ const BenefitCard = ({ icon: Icon, text, index }: { icon: typeof BadgeDollarSign
 
 const BenefitsSection = () => {
   const { ref: headRef, style: headStyle } = useScrollReveal("fade-up");
+  const { ref: imgRef, style: imgStyle } = useScrollReveal("zoom-in");
 
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4 max-w-5xl">
+        <div ref={imgRef} style={imgStyle} className="flex justify-center mb-10">
+          <img
+            src={nailMachine}
+            alt="Home industry nail making machine"
+            className="rounded-2xl shadow-lg max-w-sm w-full object-contain"
+          />
+        </div>
         <div ref={headRef} style={headStyle}>
           <h2 className="text-3xl md:text-5xl font-bold font-heading text-center mb-4">
             Why This Guide <span className="text-secondary">Works</span>
