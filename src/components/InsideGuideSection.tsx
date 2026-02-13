@@ -1,6 +1,7 @@
 import CTAButton from "./CTAButton";
 import { CheckCircle } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import chalkMachine from "@/assets/chalk-machine.webp";
 
 const items = [
   "A list of affordable machines that work well in Kenya",
@@ -12,10 +13,18 @@ const items = [
 const InsideGuideSection = () => {
   const { ref: headRef, style: headStyle } = useScrollReveal("fade-down");
   const { ref: cardRef, style: cardStyle } = useScrollReveal("fade-up", 150);
+  const { ref: imgRef, style: imgStyle } = useScrollReveal("zoom-in");
 
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4 max-w-3xl">
+        <div ref={imgRef} style={imgStyle} className="flex justify-center mb-10">
+          <img
+            src={chalkMachine}
+            alt="Chalk making machine for home industry"
+            className="rounded-2xl shadow-lg max-w-sm w-full object-contain"
+          />
+        </div>
         <div ref={headRef} style={headStyle}>
           <h2 className="text-3xl md:text-5xl font-bold font-heading text-center mb-12">
             What You'll Find <span className="text-secondary">Inside</span>
