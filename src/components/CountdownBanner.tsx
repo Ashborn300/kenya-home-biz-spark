@@ -33,17 +33,17 @@ const CountdownBanner = () => {
   const pad = (n: number) => String(n).padStart(2, "0");
 
   return (
-    <div className="w-full bg-destructive text-destructive-foreground py-3 px-4 text-center z-50 relative">
-      <div className="container mx-auto flex flex-col sm:flex-row items-center justify-center gap-3 text-sm md:text-base font-medium">
+    <div className="w-full bg-destructive text-destructive-foreground py-2.5 px-4 text-center z-50 sticky top-0">
+      <div className="container mx-auto flex flex-col sm:flex-row items-center justify-center gap-2 text-sm font-medium">
         <span>
-          🔥 This promotion expires in{" "}
+          🔥 Offer expires in{" "}
           <span className="font-bold font-heading">
-            0 days {pad(hours)}h {pad(minutes)}m {pad(seconds)}s
+            {pad(hours)}:{pad(minutes)}:{pad(seconds)}
           </span>
         </span>
         <CTAButton
-          className="!py-2 !px-5 !text-sm !rounded-md !animate-none"
-          label="Buy Now"
+          className="!py-1.5 !px-4 !text-xs !rounded-md !animate-none"
+          label="Get It Now"
         />
       </div>
     </div>

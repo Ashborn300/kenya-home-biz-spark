@@ -1,69 +1,49 @@
-import { Link } from "react-router-dom";
 import heroBg from "@/assets/hero-bg.jpg";
 import kenyaFlag from "@/assets/kenya-flag.png";
 import CTAButton from "./CTAButton";
-import { CheckCircle, Shield } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 
 const hooks = [
-  "No need for big startup capital to begin.",
-  "This guide simplifies every step for you.",
-];
-
-const swahiliHooks = [
-  "Anza biashara yako ukiwa nyumbani — bila stress.",
-  "Mtaji mdogo, faida kubwa.",
-  "Pata mwelekeo sahihi hatua kwa hatua.",
+  "No big capital needed — start small.",
+  "Step-by-step guide with exact costs & machines.",
+  "Real monthly income potential in Kenya.",
 ];
 
 const HeroSection = () => (
   <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-    {/* Admin button */}
-    <Link
-      to="/admin"
-      className="absolute top-4 right-4 z-20 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-background/10 backdrop-blur-sm border border-white/20 text-primary-foreground/70 hover:text-primary-foreground hover:bg-background/20 transition-all text-xs"
-    >
-      <Shield className="w-3.5 h-3.5" />
-      Admin
-    </Link>
-
     <div
       className="absolute inset-0 bg-cover bg-center"
       style={{ backgroundImage: `url(${heroBg})` }}
     />
     <div className="absolute inset-0" style={{ background: "var(--gradient-hero)" }} />
 
-    <div className="relative z-10 container mx-auto px-4 py-20 text-center max-w-4xl">
-      <div className="space-y-6 animate-fade-up">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-heading text-primary-foreground leading-tight">
+    <div className="relative z-10 container mx-auto px-4 py-16 text-center max-w-3xl">
+      <div className="space-y-5 animate-fade-up">
+        <img src={kenyaFlag} alt="Kenya flag" className="w-12 h-auto mx-auto" />
+
+        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold font-heading text-primary-foreground leading-tight">
           Learn How to Start a{" "}
-          <span className="text-primary-foreground/80">Mini Industry</span> in Kenya
+          <span className="text-secondary">Mini Industry</span> in Kenya
         </h1>
 
-        <img src={kenyaFlag} alt="Kenya flag" className="w-16 h-auto mx-auto" />
-
-        <p className="text-lg md:text-xl text-primary-foreground/90 max-w-2xl mx-auto leading-relaxed">
-          Launch a profitable mini-industry from your house — step by step, with the exact machines, costs, and monthly income potential in Kenya.
+        <p className="text-base md:text-lg text-primary-foreground/90 max-w-xl mx-auto leading-relaxed">
+          The complete guide to launching a profitable home business — machines, costs, suppliers & monthly income breakdown.
         </p>
 
-        <ul className="space-y-3 text-left max-w-md mx-auto">
+        <ul className="space-y-2 text-left max-w-md mx-auto">
           {hooks.map((hook) => (
-            <li key={hook} className="flex items-start gap-3 text-primary-foreground/90">
+            <li key={hook} className="flex items-start gap-2.5 text-primary-foreground/90 text-sm md:text-base">
               <CheckCircle className="w-5 h-5 text-secondary mt-0.5 shrink-0" />
               <span>{hook}</span>
             </li>
           ))}
         </ul>
 
-        <div className="space-y-2 pt-2">
-          {swahiliHooks.map((line) => (
-            <p key={line} className="text-secondary italic text-sm md:text-base">
-              {line}
-            </p>
-          ))}
-        </div>
-
-        <div className="pt-4">
+        <div className="pt-3 space-y-3">
           <CTAButton />
+          <p className="text-primary-foreground/60 text-xs">
+            ✅ Instant download • 📱 Works on any device • 🇰🇪 Made for Kenya
+          </p>
         </div>
       </div>
     </div>
