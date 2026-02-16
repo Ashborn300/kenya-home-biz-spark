@@ -35,8 +35,8 @@ const HeroSection = () => (
     <div className="relative z-10 container mx-auto px-4 py-20 text-center max-w-4xl">
       <div className="space-y-6 animate-fade-up">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-heading text-primary-foreground leading-tight">
-          Earn Millions of Ksh{" "}
-          <span className="text-primary-foreground/80">From Home</span> in Kenya
+          Learn How to Start a{" "}
+          <span className="text-primary-foreground/80">Mini Industry</span> in Kenya
         </h1>
 
         <img src={kenyaFlag} alt="Kenya flag" className="w-16 h-auto mx-auto" />
