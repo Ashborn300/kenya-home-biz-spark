@@ -88,23 +88,32 @@ const PaymentModal = ({ open, onOpenChange, country = "KE" }: PaymentModalProps)
         {status === "success" ? (
           <div className="text-center py-6 space-y-4">
             <CheckCircle className="w-16 h-16 text-primary mx-auto" />
-            <p className="text-lg font-medium">
-              Payment Successful!
-            </p>
-            <p className="text-muted-foreground text-sm">
-              Your guide (PDF + videos) is ready to download. Click the button below:
-            </p>
-            <a
-              href="https://www.transfernow.net/dl/20260213gmnJnoQ8"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button className="mt-2 w-full" size="lg">
-                Download Your Guide
-              </Button>
-            </a>
+            {country === "DRC" ? (
+              <>
+                <p className="text-lg font-medium">Paiement réussi !</p>
+                <p className="text-muted-foreground text-sm">
+                  {config.successMsg}
+                </p>
+              </>
+            ) : (
+              <>
+                <p className="text-lg font-medium">Payment Successful!</p>
+                <p className="text-muted-foreground text-sm">
+                  Your guide (PDF + videos) is ready to download. Click the button below:
+                </p>
+                <a
+                  href="https://www.transfernow.net/dl/20260213gmnJnoQ8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button className="mt-2 w-full" size="lg">
+                    Download Your Guide
+                  </Button>
+                </a>
+              </>
+            )}
             <Button variant="outline" onClick={() => handleClose(false)} className="mt-2">
-              Close
+              {country === "DRC" ? "Fermer" : "Close"}
             </Button>
           </div>
         ) : (
