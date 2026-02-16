@@ -62,9 +62,8 @@ const FAQSection = () => {
           </Accordion>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
+        <div className="flex items-center justify-center mt-10">
           <CTAButton />
-          <CTAButton country="DRC" />
         </div>
       </div>
     </section>
