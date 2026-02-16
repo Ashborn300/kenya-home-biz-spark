@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import heroBg from "@/assets/hero-bg.jpg";
-import kenyaFlag from "@/assets/kenya-flag.jpg";
+import kenyaFlag from "@/assets/kenya-flag.png";
 import CTAButton from "./CTAButton";
 import { CheckCircle, Shield } from "lucide-react";
 
