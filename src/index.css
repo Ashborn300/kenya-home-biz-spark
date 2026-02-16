@@ -118,4 +118,8 @@
   .swahili-text {
     @apply italic text-secondary font-medium;
   }
+
+  .safe-area-bottom {
+    padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+  }
 }
