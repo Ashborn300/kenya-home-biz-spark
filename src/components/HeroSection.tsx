@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import heroBg from "@/assets/hero-bg.jpg";
+import kenyaFlag from "@/assets/kenya-flag.jpg";
 import CTAButton from "./CTAButton";
 import { CheckCircle, Shield } from "lucide-react";
 
@@ -37,6 +38,8 @@ const HeroSection = () => (
           Earn Millions of Ksh{" "}
           <span className="text-primary-foreground/80">From Home</span> in Kenya
         </h1>
+
+        <img src={kenyaFlag} alt="Kenya flag" className="w-16 h-auto mx-auto" />
 
         <p className="text-lg md:text-xl text-primary-foreground/90 max-w-2xl mx-auto leading-relaxed">
           Launch a profitable mini-industry from your house — step by step, with the exact machines, costs, and monthly income potential in Kenya.
