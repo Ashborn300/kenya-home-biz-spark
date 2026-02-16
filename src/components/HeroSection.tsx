@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import heroBg from "@/assets/hero-bg.jpg";
 import CTAButton from "./CTAButton";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, Shield } from "lucide-react";
 
 const hooks = [
   "No need for big startup capital to begin.",
@@ -15,6 +16,15 @@ const swahiliHooks = [
 
 const HeroSection = () => (
   <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+    {/* Admin button */}
+    <Link
+      to="/admin"
+      className="absolute top-4 right-4 z-20 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-background/10 backdrop-blur-sm border border-white/20 text-primary-foreground/70 hover:text-primary-foreground hover:bg-background/20 transition-all text-xs"
+    >
+      <Shield className="w-3.5 h-3.5" />
+      Admin
+    </Link>
+
     <div
       className="absolute inset-0 bg-cover bg-center"
       style={{ backgroundImage: `url(${heroBg})` }}
