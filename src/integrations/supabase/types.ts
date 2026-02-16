@@ -47,6 +47,30 @@ export type Database = {
         }
         Relationships: []
       }
+      page_views: {
+        Row: {
+          id: string
+          page: string
+          referrer: string | null
+          user_agent: string | null
+          visited_at: string
+        }
+        Insert: {
+          id?: string
+          page?: string
+          referrer?: string | null
+          user_agent?: string | null
+          visited_at?: string
+        }
+        Update: {
+          id?: string
+          page?: string
+          referrer?: string | null
+          user_agent?: string | null
+          visited_at?: string
+        }
+        Relationships: []
+      }
       user_roles: {
         Row: {
           id: string

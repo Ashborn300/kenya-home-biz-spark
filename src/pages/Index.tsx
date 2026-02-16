@@ -9,8 +9,11 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import TrustedSection from "@/components/TrustedSection";
 import FAQSection from "@/components/FAQSection";
 import FooterSection from "@/components/FooterSection";
+import { usePageView } from "@/hooks/usePageView";
 
-const Index = () => (
+const Index = () => {
+  usePageView("/");
+  return (
   <main>
     <CountdownBanner />
     <HeroSection />
@@ -25,5 +28,6 @@ const Index = () => (
     <FooterSection />
   </main>
 );
+};
 
 export default Index;

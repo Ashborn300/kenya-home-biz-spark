@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Loader2, LogOut, RefreshCw } from "lucide-react";
+import { Loader2, LogOut, RefreshCw, Eye } from "lucide-react";
 
 interface Order {
   id: string;
@@ -19,6 +19,8 @@ interface Order {
 const AdminDashboard = () => {
   const [orders, setOrders] = useState<Order[]>([]);
   const [loading, setLoading] = useState(true);
+  const [totalVisits, setTotalVisits] = useState<number>(0);
+  const [todayVisits, setTodayVisits] = useState<number>(0);
   const navigate = useNavigate();
 
   const fetchOrders = async () => {
@@ -40,14 +42,29 @@ const AdminDashboard = () => {
     setLoading(false);
   };
 
+  const fetchVisits = async () => {
+    const { count: total } = await supabase
+      .from("page_views")
+      .select("*", { count: "exact", head: true });
+    setTotalVisits(total || 0);
+
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const { count: todayCount } = await supabase
+      .from("page_views")
+      .select("*", { count: "exact", head: true })
+      .gte("visited_at", today.toISOString());
+    setTodayVisits(todayCount || 0);
+  };
+
   useEffect(() => {
-    // Check auth
     supabase.auth.getSession().then(({ data: { session } }) => {
       if (!session) {
         navigate("/admin");
         return;
       }
       fetchOrders();
+      fetchVisits();
     });
   }, []);
 
@@ -56,13 +73,18 @@ const AdminDashboard = () => {
     navigate("/admin");
   };
 
+  const handleRefresh = () => {
+    fetchOrders();
+    fetchVisits();
+  };
+
   return (
     <div className="min-h-screen bg-muted/30 p-4 md:p-8">
       <div className="max-w-6xl mx-auto space-y-6">
         <div className="flex items-center justify-between">
           <h1 className="text-2xl font-heading font-bold">Orders Dashboard</h1>
           <div className="flex gap-2">
-            <Button variant="outline" size="sm" onClick={fetchOrders} disabled={loading}>
+            <Button variant="outline" size="sm" onClick={handleRefresh} disabled={loading}>
               <RefreshCw className={`w-4 h-4 mr-1 ${loading ? "animate-spin" : ""}`} />
               Refresh
             </Button>
@@ -70,6 +92,34 @@ const AdminDashboard = () => {
               <LogOut className="w-4 h-4 mr-1" />
               Logout
             </Button>
+          </div>
+        </div>
+
+        {/* Visit Stats */}
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="bg-background rounded-lg border shadow-sm p-4 flex items-center gap-3">
+            <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+              <Eye className="w-5 h-5 text-primary" />
+            </div>
+            <div>
+              <p className="text-2xl font-bold">{totalVisits}</p>
+              <p className="text-xs text-muted-foreground">Total Visits</p>
+            </div>
+          </div>
+          <div className="bg-background rounded-lg border shadow-sm p-4 flex items-center gap-3">
+            <div className="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center">
+              <Eye className="w-5 h-5 text-secondary" />
+            </div>
+            <div>
+              <p className="text-2xl font-bold">{todayVisits}</p>
+              <p className="text-xs text-muted-foreground">Today's Visits</p>
+            </div>
+          </div>
+          <div className="bg-background rounded-lg border shadow-sm p-4 flex items-center gap-3 col-span-2 md:col-span-1">
+            <div>
+              <p className="text-2xl font-bold">{orders.length}</p>
+              <p className="text-xs text-muted-foreground">Total Orders</p>
+            </div>
           </div>
         </div>
 
