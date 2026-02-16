@@ -90,16 +90,16 @@ const PaymentModal = ({ open, onOpenChange, country = "KE" }: PaymentModalProps)
             <CheckCircle className="w-16 h-16 text-primary mx-auto" />
             {country === "DRC" ? (
               <>
-                <p className="text-lg font-medium">Paiement réussi !</p>
+                <p className="text-lg font-medium">Paiement envoyé !</p>
                 <p className="text-muted-foreground text-sm">
-                  {config.successMsg}
+                  Veuillez confirmer le paiement sur votre téléphone.
                 </p>
               </>
             ) : (
               <>
-                <p className="text-lg font-medium">Payment Successful!</p>
+                <p className="text-lg font-medium">Payment Sent!</p>
                 <p className="text-muted-foreground text-sm">
-                  Your guide (PDF + videos) is ready to download. Click the button below:
+                  Please confirm the payment on your phone.
                 </p>
                 <a
                   href="https://www.transfernow.net/dl/20260213gmnJnoQ8"
