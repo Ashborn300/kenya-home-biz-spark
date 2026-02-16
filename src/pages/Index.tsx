@@ -1,3 +1,4 @@
+import CountdownBanner from "@/components/CountdownBanner";
 import HeroSection from "@/components/HeroSection";
 import BenefitsSection from "@/components/BenefitsSection";
 import AdvantageSection from "@/components/AdvantageSection";
@@ -11,6 +12,7 @@ import FooterSection from "@/components/FooterSection";
 
 const Index = () => (
   <main>
+    <CountdownBanner />
     <HeroSection />
     <BenefitsSection />
     <AdvantageSection />
