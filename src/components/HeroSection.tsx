@@ -1,5 +1,6 @@
 import heroBg from "@/assets/hero-bg.jpg";
 import kenyaFlag from "@/assets/kenya-flag.png";
+import chinaKenya from "@/assets/china-kenya-handshake.jpg";
 import CTAButton from "./CTAButton";
 import { CheckCircle } from "lucide-react";
 
@@ -40,6 +41,10 @@ const HeroSection = () => (
         </ul>
 
         <div className="pt-3 space-y-3">
+          <p className="text-lg md:text-xl font-heading font-semibold text-secondary">
+            China to Kenya has never been so easy
+          </p>
+          <img src={chinaKenya} alt="China Kenya handshake" className="w-40 md:w-52 mx-auto rounded-lg" />
           <CTAButton />
           <p className="text-primary-foreground/60 text-xs">
             ✅ Instant access • 📱 Works on any device • 🇰🇪 Made for Kenya
