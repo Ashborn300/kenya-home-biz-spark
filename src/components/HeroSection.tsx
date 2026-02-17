@@ -23,8 +23,8 @@ const HeroSection = () => (
         <img src={kenyaFlag} alt="Kenya flag" className="w-12 h-auto mx-auto" />
 
         <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold font-heading text-primary-foreground leading-tight">
-          Small Manufacturing{" "}
-          <span className="text-secondary">Guide</span> for Kenya
+          China to Kenya{" "}
+          <span className="text-secondary">Full Guide</span> for You
         </h1>
 
         <p className="text-base md:text-lg text-primary-foreground/90 max-w-xl mx-auto leading-relaxed">
