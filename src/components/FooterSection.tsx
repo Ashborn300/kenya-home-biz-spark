@@ -22,7 +22,7 @@ const FooterSection = () => {
             <Mail className="w-4 h-4" />
             joshuamakizo@gmail.com
           </a>
-          <a href="https://wa.me/254712345678" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-primary-foreground transition-colors">
+          <a href="https://wa.me/243834126748" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-primary-foreground transition-colors">
             <MessageCircle className="w-4 h-4" />
             WhatsApp Support
           </a>
