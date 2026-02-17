@@ -45,6 +45,9 @@ const HeroSection = () => (
             China to Kenya has never been so easy
           </p>
           <img src={chinaKenya} alt="China Kenya handshake" className="w-40 md:w-52 mx-auto rounded-lg" />
+          <p className="text-sm text-primary-foreground/80 max-w-sm mx-auto">
+            Source machines directly from China — we show you every step, from suppliers to delivery at your door in Kenya.
+          </p>
           <CTAButton />
           <p className="text-primary-foreground/60 text-xs">
             ✅ Instant access • 📱 Works on any device • 🇰🇪 Made for Kenya
