@@ -1,11 +1,11 @@
 import CTAButton from "./CTAButton";
-import { TrendingUp, Shield, DollarSign, Clock } from "lucide-react";
+import { BookOpen, Shield, Package, Clock } from "lucide-react";
 import { useCountUp } from "@/hooks/useCountUp";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const stats = [
-  { icon: DollarSign, label: "Low-Cost Entry", desc: "Machines selected for affordable pricing", value: 15, suffix: "+", prefix: "" },
-  { icon: TrendingUp, label: "Clear Profitability", desc: "Monthly earning estimates included", value: 200, suffix: "K+", prefix: "" },
+  { icon: Package, label: "Affordable Machines", desc: "Machines selected for budget-friendly pricing", value: 15, suffix: "+", prefix: "" },
+  { icon: BookOpen, label: "Detailed Breakdowns", desc: "Cost and setup details included per machine", value: 200, suffix: "K+", prefix: "" },
   { icon: Shield, label: "Reduced Risk", desc: "Shipping guidance + cost planning included", value: 95, suffix: "%", prefix: "" },
   { icon: Clock, label: "Time-Saving", desc: "Everything organized in one guide", value: 50, suffix: "+", prefix: "" },
 ];
@@ -36,10 +36,10 @@ const StatsSection = () => {
       <div className="container mx-auto px-4 max-w-5xl">
         <div ref={headRef} style={headStyle}>
           <h2 className="text-3xl md:text-5xl font-bold font-heading text-center mb-4">
-            Results & Market <span className="text-secondary">Reality</span>
+            Guide Overview & <span className="text-secondary">Key Facts</span>
           </h2>
           <p className="text-center text-muted-foreground mb-12">
-            Stats & advantages for the Kenyan market
+            Practical information for the Kenyan market
           </p>
         </div>
 
@@ -50,7 +50,7 @@ const StatsSection = () => {
         </div>
 
         <p className="swahili-text text-center text-lg mb-8">
-          Punguza makosa, ongeza faida.
+          Punguza makosa, panga vizuri.
         </p>
 
         <div className="text-center">

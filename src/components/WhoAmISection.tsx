@@ -20,7 +20,6 @@ const WhoAmISection = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-10 items-center mb-12">
-          {/* Portrait */}
           <div ref={img1Ref} style={img1Style} className="flex justify-center">
             <img
               src={joshuaPortrait}
@@ -29,7 +28,6 @@ const WhoAmISection = () => {
             />
           </div>
 
-          {/* Bio */}
           <div ref={textRef} style={textStyle} className="space-y-5">
             <h3 className="text-2xl md:text-3xl font-bold font-heading text-foreground">
               Joshua Makizo
@@ -38,22 +36,21 @@ const WhoAmISection = () => {
               Kenyan China Market Specialist · 6+ Years Experience
             </p>
             <p className="text-foreground/80 leading-relaxed text-lg">
-              I've spent over 6 years navigating the China market — sourcing machines, 
+              I've spent over 6 years navigating the China market — sourcing machines,
               building supplier relationships, and mastering the import process from start to finish.
             </p>
             <p className="text-foreground/80 leading-relaxed text-lg">
-              Today, I run <strong className="text-foreground">5+ small home industries</strong> in Kenya 
-              and have already helped many people launch their own profitable home businesses 
+              Today, I manage <strong className="text-foreground">5+ small manufacturing activities</strong> in Kenya
+              and have already helped many people set up their own small-scale production
               with affordable machines and clear, step-by-step guidance.
             </p>
             <p className="text-foreground/80 leading-relaxed text-lg">
-              This guide is everything I wish I had when I started — no guesswork, no wasted money, 
-              just a <strong className="text-foreground">proven path to building your own mini-industry</strong>.
+              This guide is everything I wish I had when I started — no guesswork, no wasted money,
+              just a <strong className="text-foreground">practical roadmap to setting up your own small manufacturing activity</strong>.
             </p>
           </div>
         </div>
 
-        {/* Additional photos */}
         <div className="grid grid-cols-2 gap-4 max-w-lg mx-auto">
           <div ref={img2Ref} style={img2Style}>
             <img

@@ -95,7 +95,7 @@ const PaymentModal = ({ open, onOpenChange }: PaymentModalProps) => {
     <Dialog open={open} onOpenChange={handleClose}>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
-          <DialogTitle className="font-heading text-xl">Buy the Guide — 2,600 Ksh</DialogTitle>
+          <DialogTitle className="font-heading text-xl">Get the Guide — 2,600 Ksh</DialogTitle>
           <DialogDescription>Enter your M-Pesa phone number to receive a payment prompt on your phone.</DialogDescription>
         </DialogHeader>
 

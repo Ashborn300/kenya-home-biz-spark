@@ -4,9 +4,9 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 import chalkMachine from "@/assets/chalk-machine.webp";
 
 const items = [
-  "A list of affordable machines that work well in Kenya",
+  "A list of affordable machines suited for Kenya",
   "Realistic cost breakdowns (purchase + shipping + operating expenses)",
-  "Monthly income potential per machine (Kenya context)",
+  "Production capacity and market demand examples per machine",
   "A clear step-by-step setup roadmap",
 ];
 
@@ -33,7 +33,7 @@ const InsideGuideSection = () => {
 
         <div ref={cardRef} style={cardStyle} className="section-card mb-10">
           <ul className="space-y-5">
-            {items.map((item, i) => (
+            {items.map((item) => (
               <li key={item} className="flex items-start gap-4">
                 <CheckCircle className="w-6 h-6 text-secondary mt-0.5 shrink-0" />
                 <span className="text-lg text-foreground/90">{item}</span>

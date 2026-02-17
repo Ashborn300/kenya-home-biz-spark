@@ -23,7 +23,7 @@ const AdvantageSection = () => {
             A Major <span className="text-primary-foreground/80">Advantage</span>
           </h2>
           <p className="text-xl text-primary-foreground/90 leading-relaxed mb-6">
-            No need for large spaces or advanced technical skills — we selected the easiest machines to use.
+            No need for large spaces or advanced technical skills — we selected the easiest machines to operate.
           </p>
           <p className="italic font-medium text-primary-foreground/70 mb-10 text-lg">
             Huhitaji nafasi kubwa wala ujuzi wa kiufundi.

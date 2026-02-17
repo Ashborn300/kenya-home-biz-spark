@@ -22,10 +22,10 @@ const TrustedSection = () => {
       <div className="container mx-auto px-4 max-w-5xl">
         <div ref={headRef} style={headStyle}>
           <h2 className="text-3xl md:text-5xl font-bold font-heading text-center mb-4">
-            They Trusted Us, <span className="text-secondary">Now It's Your Turn</span>
+            Real Machines, <span className="text-secondary">Real Production</span>
           </h2>
           <p className="text-center text-foreground/70 text-lg mb-12">
-            Real people, real machines, real results.
+            See the actual machines and production covered in this guide.
           </p>
         </div>
 

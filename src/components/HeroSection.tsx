@@ -4,9 +4,9 @@ import CTAButton from "./CTAButton";
 import { CheckCircle } from "lucide-react";
 
 const hooks = [
-  "No big capital needed — start small.",
-  "Step-by-step guide with exact costs & machines.",
-  "Real monthly income potential in Kenya.",
+  "No big capital needed — start with affordable machines.",
+  "Step-by-step guide with exact costs & machine details.",
+  "Practical examples for the Kenyan market.",
 ];
 
 const HeroSection = () => (
@@ -22,12 +22,12 @@ const HeroSection = () => (
         <img src={kenyaFlag} alt="Kenya flag" className="w-12 h-auto mx-auto" />
 
         <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold font-heading text-primary-foreground leading-tight">
-          Learn How to Start a{" "}
-          <span className="text-secondary">Mini Industry</span> in Kenya
+          Small Manufacturing{" "}
+          <span className="text-secondary">Guide</span> for Kenya
         </h1>
 
         <p className="text-base md:text-lg text-primary-foreground/90 max-w-xl mx-auto leading-relaxed">
-          The complete guide to launching a profitable home business — machines, costs, suppliers & monthly income breakdown.
+          A practical guide to small-scale manufacturing — machines, costs, suppliers & setup steps explained.
         </p>
 
         <ul className="space-y-2 text-left max-w-md mx-auto">
@@ -42,7 +42,7 @@ const HeroSection = () => (
         <div className="pt-3 space-y-3">
           <CTAButton />
           <p className="text-primary-foreground/60 text-xs">
-            ✅ Instant download • 📱 Works on any device • 🇰🇪 Made for Kenya
+            ✅ Instant access • 📱 Works on any device • 🇰🇪 Made for Kenya
           </p>
         </div>
       </div>
