@@ -10,7 +10,7 @@ import CTAButton from "./CTAButton";
 const faqs = [
   {
     q: "Who is this guide for?",
-    a: "Anyone in Kenya who wants to start a small home industry — whether you're a student, stay-at-home parent, or looking for a side hustle. No prior experience needed.",
+    a: "Anyone in Kenya who wants to learn about small-scale manufacturing — whether you're a student, stay-at-home parent, or looking for a new practical activity. No prior experience needed.",
   },
   {
     q: "Do I need a lot of money to start?",
@@ -18,15 +18,15 @@ const faqs = [
   },
   {
     q: "How do I receive the guide?",
-    a: "After payment, you'll receive a digital PDF guide and video tutorials instantly via email or WhatsApp. You can read and watch them on your phone, tablet, or computer.",
+    a: "After purchase, you'll receive a digital PDF guide and video tutorials instantly via email or WhatsApp. You can read and watch them on your phone, tablet, or computer.",
   },
   {
     q: "Is the information specific to Kenya?",
-    a: "Yes! Everything — from shipping costs, customs, supplier contacts, to profit margins — is tailored specifically for the Kenyan market.",
+    a: "Yes! Everything — from shipping costs, customs, supplier contacts, to production details — is tailored specifically for the Kenyan market.",
   },
   {
     q: "Can I get support after buying the guide?",
-    a: "Absolutely. You'll get access to direct support from Joshua Makizo for any questions about sourcing, importing, or setting up your home industry.",
+    a: "Absolutely. You'll get access to direct support from Joshua Makizo for any questions about sourcing, importing, or setting up your manufacturing activity.",
   },
 ];
 

@@ -4,10 +4,10 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const reviews = [
   "Everything is explained clearly — I finally understood what to buy and how to start.",
-  "The shipping info saved me a lot of money and stress.",
-  "I liked that the guide gives realistic numbers for Kenya, not vague promises.",
+  "The shipping info saved me a lot of time and confusion.",
+  "I liked that the guide gives realistic details for Kenya, not vague information.",
   "Nimeelewa kila hatua — mwongozo ni rahisi sana.",
-  "Bei na faida ziko wazi. Hakuna kubahatisha.",
+  "Maelezo yako wazi. Hakuna kubahatisha.",
 ];
 
 const ReviewCard = ({ review, index }: { review: string; index: number }) => {
@@ -32,7 +32,7 @@ const TestimonialsSection = () => {
       <div className="container mx-auto px-4 max-w-5xl">
         <div ref={headRef} style={headStyle}>
           <h2 className="text-3xl md:text-5xl font-bold font-heading text-center mb-12">
-            What Customers <span className="text-secondary">Say</span>
+            What Readers <span className="text-secondary">Say</span>
           </h2>
         </div>
 

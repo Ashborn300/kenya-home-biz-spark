@@ -6,11 +6,11 @@ import nailMachine from "@/assets/nail-machine.webp";
 const benefits = [
   {
     icon: BadgeDollarSign,
-    text: "The machines are chosen for their low prices so anyone can afford them — genuinely cheaper through our partners.",
+    text: "Machines selected for their affordable pricing — genuinely cheaper through our partners.",
   },
   {
     icon: BarChart3,
-    text: "Complete details for every machine: price, shipping, operating costs, and monthly earning potential in Kenya.",
+    text: "Complete details for every machine: price, shipping, operating costs, and market demand in Kenya.",
   },
   {
     icon: Handshake,
@@ -54,7 +54,7 @@ const BenefitsSection = () => {
             Why This Guide <span className="text-secondary">Works</span>
           </h2>
           <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Benefits of the Home Business Kenya Guide
+            What makes this manufacturing guide practical and useful
           </p>
         </div>
 
