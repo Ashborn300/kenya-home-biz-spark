@@ -10,6 +10,7 @@ import TrustedSection from "@/components/TrustedSection";
 import FAQSection from "@/components/FAQSection";
 import FooterSection from "@/components/FooterSection";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import { usePageView } from "@/hooks/usePageView";
 
 const Index = () => {
@@ -28,6 +29,7 @@ const Index = () => {
       <FAQSection />
       <FooterSection />
       <StickyMobileCTA />
+      <WhatsAppButton />
     </main>
   );
 };
