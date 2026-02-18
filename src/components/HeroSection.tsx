@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
 import heroBg from "@/assets/hero-bg.jpg";
 import kenyaFlag from "@/assets/kenya-flag.png";
 import chinaKenya from "@/assets/china-kenya-handshake.jpg";
 import CTAButton from "./CTAButton";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, Lock } from "lucide-react";
 
 const hooks = [
   "No big capital needed — start with affordable machines.",
@@ -12,6 +13,10 @@ const hooks = [
 
 const HeroSection = () => (
   <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+    <Link to="/admin" className="absolute top-4 right-4 z-20 flex items-center gap-1.5 text-xs text-primary-foreground/50 hover:text-primary-foreground/80 transition-colors bg-white/10 backdrop-blur-sm rounded-full px-3 py-1.5">
+      <Lock className="w-3 h-3" />
+      Admin
+    </Link>
     <div
       className="absolute inset-0 bg-cover bg-center"
       style={{ backgroundImage: `url(${heroBg})` }}
