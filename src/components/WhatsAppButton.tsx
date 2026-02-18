@@ -1,15 +1,14 @@
-import { MessageCircle } from "lucide-react";
-
 const WhatsAppButton = () => (
   <a
     href="https://wa.me/243834126748"
     target="_blank"
     rel="noopener noreferrer"
-    className="fixed bottom-20 md:bottom-6 right-4 z-50 flex items-center gap-2 bg-[#25D366] hover:bg-[#1ebe57] text-white font-semibold rounded-full px-5 py-3 shadow-lg transition-all hover:scale-105"
+    className="fixed bottom-20 md:bottom-6 right-4 z-50 w-14 h-14 flex items-center justify-center bg-[#25D366] hover:bg-[#1ebe57] rounded-full shadow-lg transition-all hover:scale-110"
     aria-label="Contact on WhatsApp"
   >
-    <MessageCircle className="w-5 h-5" />
-    <span className="hidden sm:inline">WhatsApp</span>
+    <svg viewBox="0 0 32 32" className="w-8 h-8 fill-white">
+      <path d="M16.004 0h-.008C7.174 0 0 7.176 0 16c0 3.5 1.129 6.744 3.047 9.379L1.054 31.49l6.328-2.012C9.94 31.072 12.862 32 16.004 32 24.826 32 32 24.822 32 16S24.826 0 16.004 0zm9.335 22.594c-.39 1.1-1.932 2.013-3.182 2.28-.856.18-1.974.324-5.737-1.233-4.816-1.992-7.916-6.878-8.156-7.196-.232-.318-1.942-2.586-1.942-4.932s1.229-3.498 1.665-3.978c.436-.48.952-.6 1.27-.6.316 0 .63.003.906.016.29.014.68-.11 1.064.812.39.94 1.326 3.236 1.442 3.47.116.234.194.506.04.812-.156.318-.234.514-.468.794-.234.28-.492.624-.702.838-.234.236-.478.492-.206.966.272.474 1.212 2 2.602 3.24 1.786 1.592 3.292 2.086 3.76 2.32.468.234.742.196 1.014-.118.272-.318 1.17-1.36 1.482-1.828.312-.468.624-.39 1.054-.234.432.156 2.724 1.284 3.192 1.518.468.234.78.352.896.546.116.194.116 1.124-.274 2.224z" />
+    </svg>
   </a>
 );
 
