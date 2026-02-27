@@ -1,4 +1,4 @@
-import CountdownBanner from "@/components/CountdownBanner";
+
 import HeroSection from "@/components/HeroSection";
 import BenefitsSection from "@/components/BenefitsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -17,7 +17,7 @@ const Index = () => {
   usePageView("/");
   return (
     <main>
-      <CountdownBanner />
+      
       <HeroSection />
       <BenefitsSection />
       <TestimonialsSection />
