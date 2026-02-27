@@ -6,9 +6,9 @@ import CTAButton from "./CTAButton";
 import { CheckCircle, Lock } from "lucide-react";
 
 const hooks = [
-  "No big capital needed — start with affordable machines.",
-  "Step-by-step guide with exact costs & machine details.",
-  "Practical examples for the Kenyan market.",
+  "Pas besoin de gros capital — commencez avec des machines abordables.",
+  "Guide étape par étape avec coûts exacts & détails des machines.",
+  "Exemples pratiques pour le marché congolais.",
 ];
 
 const HeroSection = () => (
@@ -25,15 +25,15 @@ const HeroSection = () => (
 
     <div className="relative z-10 container mx-auto px-4 py-16 text-center max-w-3xl">
       <div className="space-y-5 animate-fade-up">
-        <img src={kenyaFlag} alt="Kenya flag" className="w-12 h-auto mx-auto" />
+        <img src={kenyaFlag} alt="Drapeau RDC" className="w-12 h-auto mx-auto" />
 
         <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold font-heading text-primary-foreground leading-tight">
-          China to Kenya{" "}
-          <span className="text-secondary">Full Guide</span> for You
+          Chine vers Congo RDC{" "}
+          <span className="text-secondary">Guide Complet</span> pour Vous
         </h1>
 
         <p className="text-base md:text-lg text-primary-foreground/90 max-w-xl mx-auto leading-relaxed">
-          A practical guide to small-scale manufacturing — machines, costs, suppliers & setup steps explained.
+          Un guide pratique pour la petite industrie — machines, coûts, fournisseurs & étapes de mise en place.
         </p>
 
         <ul className="space-y-2 text-left max-w-md mx-auto">
@@ -47,15 +47,15 @@ const HeroSection = () => (
 
         <div className="pt-3 space-y-3">
           <p className="text-lg md:text-xl font-heading font-semibold text-secondary">
-            China to Kenya has never been so easy
+            La Chine vers le Congo n'a jamais été aussi simple
           </p>
-          <img src={chinaKenya} alt="China Kenya handshake" className="w-40 md:w-52 mx-auto rounded-lg" />
+          <img src={chinaKenya} alt="Poignée de main Chine Congo" className="w-40 md:w-52 mx-auto rounded-lg" />
           <p className="text-sm text-primary-foreground/80 max-w-sm mx-auto">
-            Source machines directly from China — we show you every step, from suppliers to delivery at your door in Kenya.
+            Sourcez des machines directement depuis la Chine — nous vous montrons chaque étape, des fournisseurs à la livraison chez vous au Congo.
           </p>
           <CTAButton />
           <p className="text-primary-foreground/60 text-xs">
-            ✅ Instant access • 📱 Works on any device • 🇰🇪 Made for Kenya
+            ✅ Accès instantané • 📱 Fonctionne sur tout appareil • 🇨🇩 Conçu pour le Congo RDC
           </p>
         </div>
       </div>

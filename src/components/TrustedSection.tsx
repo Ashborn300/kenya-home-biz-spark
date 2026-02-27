@@ -7,11 +7,11 @@ import trustedChalk2 from "@/assets/trusted-chalk2.jpg";
 import trustedChalk3 from "@/assets/trusted-chalk3.jpg";
 
 const images = [
-  { src: trustedSoap, alt: "Soap cutting machine in action" },
-  { src: trustedMachine, alt: "Industrial processing machine" },
-  { src: trustedChalk1, alt: "Chalk making production" },
-  { src: trustedChalk2, alt: "Chalk production output" },
-  { src: trustedChalk3, alt: "Small-scale chalk manufacturing" },
+  { src: trustedSoap, alt: "Machine de découpe de savon en action" },
+  { src: trustedMachine, alt: "Machine de transformation industrielle" },
+  { src: trustedChalk1, alt: "Production de craie" },
+  { src: trustedChalk2, alt: "Résultat de production de craie" },
+  { src: trustedChalk3, alt: "Fabrication de craie à petite échelle" },
 ];
 
 const TrustedSection = () => {
@@ -22,10 +22,10 @@ const TrustedSection = () => {
       <div className="container mx-auto px-4 max-w-5xl">
         <div ref={headRef} style={headStyle}>
           <h2 className="text-3xl md:text-5xl font-bold font-heading text-center mb-4">
-            Real Machines, <span className="text-secondary">Real Production</span>
+            Vraies machines, <span className="text-secondary">vraie production</span>
           </h2>
           <p className="text-center text-foreground/70 text-lg mb-12">
-            See the actual machines and production covered in this guide.
+            Découvrez les machines et la production réelles couvertes dans cette formation.
           </p>
         </div>
 

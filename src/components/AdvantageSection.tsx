@@ -20,13 +20,13 @@ const AdvantageSection = () => {
 
         <div ref={textRef} style={textStyle}>
           <h2 className="text-3xl md:text-5xl font-bold font-heading text-primary-foreground mb-6">
-            A Major <span className="text-primary-foreground/80">Advantage</span>
+            Un <span className="text-primary-foreground/80">avantage majeur</span>
           </h2>
           <p className="text-xl text-primary-foreground/90 leading-relaxed mb-6">
-            No need for large spaces or advanced technical skills — we selected the easiest machines to operate.
+            Pas besoin de grands espaces ni de compétences techniques avancées — nous avons sélectionné les machines les plus faciles à utiliser.
           </p>
           <p className="italic font-medium text-primary-foreground/70 mb-10 text-lg">
-            Huhitaji nafasi kubwa wala ujuzi wa kiufundi.
+            Commencez simplement, produisez efficacement.
           </p>
           <CTAButton />
         </div>

@@ -15,7 +15,7 @@ const WhoAmISection = () => {
       <div className="container mx-auto px-4 max-w-5xl">
         <div ref={headRef} style={headStyle}>
           <h2 className="text-3xl md:text-5xl font-bold font-heading text-center mb-12">
-            Who <span className="text-secondary">Am I?</span>
+            Qui <span className="text-secondary">suis-je ?</span>
           </h2>
         </div>
 
@@ -33,20 +33,20 @@ const WhoAmISection = () => {
               Joshua Makizo
             </h3>
             <p className="text-lg text-secondary font-semibold">
-              Kenyan China Market Specialist · 6+ Years Experience
+              Spécialiste du marché chinois pour le Congo · 6+ ans d'expérience
             </p>
             <p className="text-foreground/80 leading-relaxed text-lg">
-              I've spent over 6 years navigating the China market — sourcing machines,
-              building supplier relationships, and mastering the import process from start to finish.
+              J'ai passé plus de 6 ans à naviguer le marché chinois — sourcing de machines,
+              construction de relations avec les fournisseurs et maîtrise du processus d'importation de A à Z.
             </p>
             <p className="text-foreground/80 leading-relaxed text-lg">
-              Today, I manage <strong className="text-foreground">5+ small manufacturing activities</strong> in Kenya
-              and have already helped many people set up their own small-scale production
-              with affordable machines and clear, step-by-step guidance.
+              Aujourd'hui, je gère <strong className="text-foreground">5+ petites activités de production</strong> au Congo RDC
+              et j'ai déjà aidé de nombreuses personnes à mettre en place leur propre production
+              avec des machines abordables et un accompagnement clair, étape par étape.
             </p>
             <p className="text-foreground/80 leading-relaxed text-lg">
-              This guide is everything I wish I had when I started — no guesswork, no wasted money,
-              just a <strong className="text-foreground">practical roadmap to setting up your own small manufacturing activity</strong>.
+              Cette formation est tout ce que j'aurais aimé avoir quand j'ai commencé — pas de devinettes, pas d'argent gaspillé,
+              juste une <strong className="text-foreground">feuille de route pratique pour lancer votre propre activité de production</strong>.
             </p>
           </div>
         </div>
@@ -55,14 +55,14 @@ const WhoAmISection = () => {
           <div ref={img2Ref} style={img2Style}>
             <img
               src={joshuaChinaMarket}
-              alt="Joshua at China wholesale market"
+              alt="Joshua au marché de gros en Chine"
               className="rounded-xl shadow-md w-full object-cover aspect-square"
             />
           </div>
           <div ref={img3Ref} style={img3Style}>
             <img
               src={joshuaChinatown}
-              alt="China Town Market sourcing"
+              alt="Sourcing au marché chinois"
               className="rounded-xl shadow-md w-full object-cover aspect-square"
             />
           </div>
