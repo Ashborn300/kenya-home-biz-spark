@@ -4,10 +4,10 @@ import { useCountUp } from "@/hooks/useCountUp";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const stats = [
-  { icon: Package, label: "Affordable Machines", desc: "Machines selected for budget-friendly pricing", value: 15, suffix: "+", prefix: "" },
-  { icon: BookOpen, label: "Detailed Breakdowns", desc: "Cost and setup details included per machine", value: 200, suffix: "K+", prefix: "" },
-  { icon: Shield, label: "Reduced Risk", desc: "Shipping guidance + cost planning included", value: 95, suffix: "%", prefix: "" },
-  { icon: Clock, label: "Time-Saving", desc: "Everything organized in one guide", value: 50, suffix: "+", prefix: "" },
+  { icon: Package, label: "Machines abordables", desc: "Machines sélectionnées pour des prix accessibles", value: 15, suffix: "+", prefix: "" },
+  { icon: BookOpen, label: "Détails complets", desc: "Coûts et détails d'installation inclus par machine", value: 200, suffix: "K+", prefix: "" },
+  { icon: Shield, label: "Risque réduit", desc: "Guide de livraison + planification des coûts inclus", value: 95, suffix: "%", prefix: "" },
+  { icon: Clock, label: "Gain de temps", desc: "Tout est organisé dans une seule formation", value: 50, suffix: "+", prefix: "" },
 ];
 
 const StatCard = ({ icon: Icon, label, desc, value, suffix, prefix, index }: typeof stats[number] & { index: number }) => {
@@ -36,10 +36,10 @@ const StatsSection = () => {
       <div className="container mx-auto px-4 max-w-5xl">
         <div ref={headRef} style={headStyle}>
           <h2 className="text-3xl md:text-5xl font-bold font-heading text-center mb-4">
-            Guide Overview & <span className="text-secondary">Key Facts</span>
+            Aperçu de la formation & <span className="text-secondary">chiffres clés</span>
           </h2>
           <p className="text-center text-muted-foreground mb-12">
-            Practical information for the Kenyan market
+            Informations pratiques pour le marché congolais
           </p>
         </div>
 
@@ -50,7 +50,7 @@ const StatsSection = () => {
         </div>
 
         <p className="swahili-text text-center text-lg mb-8">
-          Punguza makosa, panga vizuri.
+          Réduisez les erreurs, planifiez mieux.
         </p>
 
         <div className="text-center">

@@ -4,10 +4,10 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 import chalkMachine from "@/assets/chalk-machine.webp";
 
 const items = [
-  "A list of affordable machines suited for Kenya",
-  "Realistic cost breakdowns (purchase + shipping + operating expenses)",
-  "Production capacity and market demand examples per machine",
-  "A clear step-by-step setup roadmap",
+  "Une liste de machines abordables adaptées au Congo RDC",
+  "Des détails réalistes des coûts (achat + livraison + exploitation)",
+  "Capacité de production et exemples de demande du marché par machine",
+  "Une feuille de route claire étape par étape",
 ];
 
 const InsideGuideSection = () => {
@@ -21,13 +21,13 @@ const InsideGuideSection = () => {
         <div ref={imgRef} style={imgStyle} className="flex justify-center mb-10">
           <img
             src={chalkMachine}
-            alt="Chalk making machine for home industry"
+            alt="Machine de fabrication de craie"
             className="rounded-2xl shadow-lg max-w-sm w-full object-contain"
           />
         </div>
         <div ref={headRef} style={headStyle}>
           <h2 className="text-3xl md:text-5xl font-bold font-heading text-center mb-12">
-            What You'll Find <span className="text-secondary">Inside</span>
+            Ce que vous trouverez <span className="text-secondary">à l'intérieur</span>
           </h2>
         </div>
 
@@ -43,7 +43,7 @@ const InsideGuideSection = () => {
         </div>
 
         <p className="swahili-text text-center text-lg mb-8">
-          Kila kitu kiko wazi — hatua kwa hatua.
+          Tout est clair — étape par étape.
         </p>
 
         <div className="text-center">

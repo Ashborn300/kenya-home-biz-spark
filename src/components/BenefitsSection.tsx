@@ -6,19 +6,19 @@ import nailMachine from "@/assets/nail-machine.webp";
 const benefits = [
   {
     icon: BadgeDollarSign,
-    text: "Machines selected for their affordable pricing — genuinely cheaper through our partners.",
+    text: "Machines sélectionnées pour leurs prix abordables — réellement moins chères grâce à nos partenaires.",
   },
   {
     icon: BarChart3,
-    text: "Complete details for every machine: price, shipping, operating costs, and market demand in Kenya.",
+    text: "Détails complets pour chaque machine : prix, livraison, coûts d'exploitation et demande du marché en RDC.",
   },
   {
     icon: Handshake,
-    text: "Extra discounts off the initial prices of these small machines, thanks to our partners.",
+    text: "Réductions supplémentaires sur les prix initiaux de ces petites machines, grâce à nos partenaires.",
   },
   {
     icon: Truck,
-    text: "We guide you through every step of the process — from purchase to setup.",
+    text: "Nous vous guidons à chaque étape du processus — de l'achat à l'installation.",
   },
 ];
 
@@ -45,16 +45,16 @@ const BenefitsSection = () => {
         <div ref={imgRef} style={imgStyle} className="flex justify-center mb-10">
           <img
             src={nailMachine}
-            alt="Home industry nail making machine"
+            alt="Machine de fabrication de clous"
             className="rounded-2xl shadow-lg max-w-sm w-full object-contain"
           />
         </div>
         <div ref={headRef} style={headStyle}>
           <h2 className="text-3xl md:text-5xl font-bold font-heading text-center mb-4">
-            Why This Guide <span className="text-secondary">Works</span>
+            Pourquoi cette formation <span className="text-secondary">fonctionne</span>
           </h2>
           <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-            What makes this manufacturing guide practical and useful
+            Ce qui rend cette formation pratique et utile
           </p>
         </div>
 
@@ -65,8 +65,8 @@ const BenefitsSection = () => {
         </div>
 
         <div className="text-center space-y-3 mb-8">
-          <p className="swahili-text">Mwongozo rahisi, matokeo halisi.</p>
-          <p className="swahili-text">Unaanza leo, unaelewa kila kitu.</p>
+          <p className="swahili-text">Un guide simple, des résultats concrets.</p>
+          <p className="swahili-text">Vous commencez aujourd'hui, vous comprenez tout.</p>
         </div>
 
         <div className="text-center">

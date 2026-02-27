@@ -3,11 +3,11 @@ import { Quote } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const reviews = [
-  "Everything is explained clearly — I finally understood what to buy and how to start.",
-  "The shipping info saved me a lot of time and confusion.",
-  "I liked that the guide gives realistic details for Kenya, not vague information.",
-  "Nimeelewa kila hatua — mwongozo ni rahisi sana.",
-  "Maelezo yako wazi. Hakuna kubahatisha.",
+  "Tout est expliqué clairement — j'ai enfin compris quoi acheter et comment démarrer.",
+  "Les informations sur la livraison m'ont fait gagner beaucoup de temps.",
+  "J'ai aimé que le guide donne des détails réalistes pour le Congo, pas des infos vagues.",
+  "Guide très complet, je recommande à 100%.",
+  "Les explications sont claires. Pas de devinettes.",
 ];
 
 const ReviewCard = ({ review, index }: { review: string; index: number }) => {
@@ -18,7 +18,7 @@ const ReviewCard = ({ review, index }: { review: string; index: number }) => {
     <div ref={ref} style={style} className="section-card relative">
       <Quote className="w-8 h-8 text-secondary/30 absolute top-6 right-6" />
       <p className={`text-foreground/85 leading-relaxed ${index >= 3 ? "italic text-secondary" : ""}`}>
-        "{review}"
+        « {review} »
       </p>
     </div>
   );
@@ -32,7 +32,7 @@ const TestimonialsSection = () => {
       <div className="container mx-auto px-4 max-w-5xl">
         <div ref={headRef} style={headStyle}>
           <h2 className="text-3xl md:text-5xl font-bold font-heading text-center mb-12">
-            What Readers <span className="text-secondary">Say</span>
+            Ce que disent nos <span className="text-secondary">membres</span>
           </h2>
         </div>
 

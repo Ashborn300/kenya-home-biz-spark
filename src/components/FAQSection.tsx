@@ -9,24 +9,24 @@ import CTAButton from "./CTAButton";
 
 const faqs = [
   {
-    q: "Who is this guide for?",
-    a: "Anyone in Kenya who wants to learn about small-scale manufacturing — whether you're a student, stay-at-home parent, or looking for a new practical activity. No prior experience needed.",
+    q: "À qui s'adresse cette formation ?",
+    a: "À toute personne au Congo RDC qui souhaite se lancer dans la petite industrie — que vous soyez étudiant, parent au foyer, ou en recherche d'une nouvelle activité pratique. Aucune expérience préalable requise.",
   },
   {
-    q: "Do I need a lot of money to start?",
-    a: "No. The guide covers affordable machines starting from as low as $50–$200. We also show you how to get the best deals directly from China.",
+    q: "Faut-il beaucoup d'argent pour commencer ?",
+    a: "Non. La formation couvre des machines abordables à partir de 50–200 $. Nous vous montrons aussi comment obtenir les meilleurs prix directement depuis la Chine.",
   },
   {
-    q: "How do I receive the guide?",
-    a: "After purchase, you'll receive a digital PDF guide and video tutorials instantly via email or WhatsApp. You can read and watch them on your phone, tablet, or computer.",
+    q: "Comment est-ce que je reçois la formation ?",
+    a: "Après l'adhésion, vous recevrez un guide PDF numérique et des tutoriels vidéo instantanément par email ou WhatsApp. Vous pouvez les consulter sur votre téléphone, tablette ou ordinateur.",
   },
   {
-    q: "Is the information specific to Kenya?",
-    a: "Yes! Everything — from shipping costs, customs, supplier contacts, to production details — is tailored specifically for the Kenyan market.",
+    q: "Les informations sont-elles spécifiques au Congo RDC ?",
+    a: "Oui ! Tout — des frais de livraison, douanes, contacts fournisseurs, aux détails de production — est adapté spécifiquement au marché congolais.",
   },
   {
-    q: "Can I get support after buying the guide?",
-    a: "Absolutely. You'll get access to direct support from Joshua Makizo for any questions about sourcing, importing, or setting up your manufacturing activity.",
+    q: "Puis-je obtenir du support après l'adhésion ?",
+    a: "Absolument. Vous aurez accès au support direct de Joshua Makizo pour toute question sur le sourcing, l'importation ou la mise en place de votre activité de production.",
   },
 ];
 
@@ -39,7 +39,7 @@ const FAQSection = () => {
       <div className="container mx-auto px-4 max-w-3xl">
         <div ref={headRef} style={headStyle}>
           <h2 className="text-3xl md:text-5xl font-bold font-heading text-center mb-12">
-            Frequently Asked <span className="text-secondary">Questions</span>
+            Questions <span className="text-secondary">fréquentes</span>
           </h2>
         </div>
 

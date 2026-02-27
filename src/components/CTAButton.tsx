@@ -6,7 +6,7 @@ interface CTAButtonProps {
   label?: string;
 }
 
-const CTAButton = ({ className = "", label = "Get the Guide — $20 (2,600 Ksh)" }: CTAButtonProps) => {
+const CTAButton = ({ className = "", label = "Adhérer à la formation — $20" }: CTAButtonProps) => {
   const [open, setOpen] = useState(false);
 
   return (
