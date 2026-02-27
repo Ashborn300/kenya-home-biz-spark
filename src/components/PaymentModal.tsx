@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Phone, Loader2, CheckCircle, AlertCircle, Mail, MessageCircle } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import airtelLogo from "@/assets/airtel-logo.png";
 
 type Status = "idle" | "loading" | "success" | "error";
 type Step = "phone" | "confirm" | "contact" | "done";
@@ -124,14 +125,17 @@ const PaymentModal = ({ open, onOpenChange }: PaymentModalProps) => {
               </div>
             )}
 
-            <Button type="submit" disabled={status === "loading" || !phone.trim()} className="w-full" size="lg">
+            <Button type="submit" disabled={status === "loading" || !phone.trim()} className="w-full bg-[hsl(0,100%,44%)] hover:bg-[hsl(0,100%,38%)] text-white" size="lg">
               {status === "loading" ? (
                 <>
                   <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                  Envoi de la demande de paiement...
+                  Envoi de la demande...
                 </>
               ) : (
-                "Payer $20 via Mobile Money"
+                <span className="flex items-center gap-2">
+                  <img src={airtelLogo} alt="Airtel Money" className="w-6 h-6 object-contain" />
+                  Payer $20 via Airtel Money
+                </span>
               )}
             </Button>
           </form>
