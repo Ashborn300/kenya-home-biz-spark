@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import heroBg from "@/assets/hero-bg.jpg";
-import kenyaFlag from "@/assets/kenya-flag.png";
-import chinaKenya from "@/assets/china-kenya-handshake.jpg";
+import rdcFlag from "@/assets/rdc-flag.png";
+import rdcChina from "@/assets/rdc-china-flag.jpg";
 import CTAButton from "./CTAButton";
 import { CheckCircle, Lock } from "lucide-react";
 
@@ -25,11 +25,10 @@ const HeroSection = () => (
 
     <div className="relative z-10 container mx-auto px-4 py-16 text-center max-w-3xl">
       <div className="space-y-5 animate-fade-up">
-        <img src={kenyaFlag} alt="Drapeau RDC" className="w-12 h-auto mx-auto" />
+        <img src={rdcFlag} alt="Drapeau RDC" className="w-12 h-auto mx-auto" />
 
         <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold font-heading text-primary-foreground leading-tight">
-          Chine vers Congo RDC{" "}
-          <span className="text-secondary">Guide Complet</span> pour Vous
+          Gagner des <span className="text-secondary">+1000$</span> chaque mois grâce à des machines chinoises en RDC
         </h1>
 
         <p className="text-base md:text-lg text-primary-foreground/90 max-w-xl mx-auto leading-relaxed">
@@ -49,7 +48,7 @@ const HeroSection = () => (
           <p className="text-lg md:text-xl font-heading font-semibold text-secondary">
             La Chine vers le Congo n'a jamais été aussi simple
           </p>
-          <img src={chinaKenya} alt="Poignée de main Chine Congo" className="w-40 md:w-52 mx-auto rounded-lg" />
+          <img src={rdcChina} alt="Drapeaux RDC et Chine" className="w-40 md:w-52 mx-auto rounded-lg" />
           <p className="text-sm text-primary-foreground/80 max-w-sm mx-auto">
             Sourcez des machines directement depuis la Chine — nous vous montrons chaque étape, des fournisseurs à la livraison chez vous au Congo.
           </p>
