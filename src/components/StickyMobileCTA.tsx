@@ -18,7 +18,7 @@ const StickyMobileCTA = () => {
     <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-background/95 backdrop-blur-sm border-t border-border py-3 px-4 safe-area-bottom">
       <CTAButton
         className="!w-full !py-3 !text-base !rounded-lg"
-        label="Adhérer à la formation — $20"
+        label="Accéder au Guide"
       />
     </div>
   );
