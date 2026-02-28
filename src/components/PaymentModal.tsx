@@ -30,7 +30,7 @@ const PaymentModal = ({ open, onOpenChange }: PaymentModalProps) => {
 
   const handleContactSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email.trim() && !whatsapp.trim()) return;
+    if (!whatsapp.trim()) return;
 
     setSaving(true);
     setErrorMsg("");
@@ -121,23 +121,7 @@ const PaymentModal = ({ open, onOpenChange }: PaymentModalProps) => {
             </p>
 
             <div className="space-y-2">
-              <label className="text-sm font-medium">Numéro utilisé pour le paiement</label>
-              <div className="relative">
-                <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-                <Input type="tel" placeholder="0974 XXX XXX" value={phone} onChange={(e) => setPhone(e.target.value)} className="pl-10" />
-              </div>
-            </div>
-
-            <div className="space-y-2">
-              <label className="text-sm font-medium">Email</label>
-              <div className="relative">
-                <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-                <Input type="email" placeholder="email@exemple.com" value={email} onChange={(e) => setEmail(e.target.value)} className="pl-10" />
-              </div>
-            </div>
-
-            <div className="space-y-2">
-              <label className="text-sm font-medium">WhatsApp</label>
+              <label className="text-sm font-medium">Votre numéro WhatsApp</label>
               <div className="relative">
                 <MessageCircle className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                 <Input type="tel" placeholder="+243 812 345 678" value={whatsapp} onChange={(e) => setWhatsapp(e.target.value)} className="pl-10" />
@@ -151,7 +135,7 @@ const PaymentModal = ({ open, onOpenChange }: PaymentModalProps) => {
               </div>
             )}
 
-            <Button type="submit" disabled={saving || (!email.trim() && !whatsapp.trim())} className="w-full" size="lg">
+            <Button type="submit" disabled={saving || !whatsapp.trim()} className="w-full" size="lg">
               {saving ? "Envoi en cours..." : "Confirmer et recevoir le guide"}
             </Button>
           </form>
